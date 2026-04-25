@@ -1,0 +1,2 @@
+# gradient-algorithm
+Грдиентный спук
