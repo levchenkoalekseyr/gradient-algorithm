@@ -1,12 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# исходная функция, которую нужно аппроксимировать моделью a(x)
-def func(x):
+def func(x):                                                                # исходная функция, которую нужно аппроксимировать моделью a(x)
     return 0.1 * x**2 - np.sin(x) + 5.
 
-# функции
-def dQ (ww):
+def dQ (ww):                                                                # производная функционала качества
     Q = 0
     l = np.arange(-5.0, 5.0, 0.1)
     for i in range (len(l)):
@@ -14,38 +12,40 @@ def dQ (ww):
         Q = Q + 2*(((ww.T)@si - func(l[i]))*(si.T))/len(l)
     return Q
 
-def a(xx, ww):
+def a(xx, ww):                                                               # модель аппраксимации
     return xx@ww
 
-coord_x = np.arange(-5.0, 5.0, 0.1) # значения по оси абсцисс [-5; 5] с шагом 0.1
-coord_y = func(coord_x) # значения функции по оси ординат
+coord_x = np.arange(-5.0, 5.0, 0.1)                                          # значения по оси абсцисс [-5; 5] с шагом 0.1
+coord_y = func(coord_x)                                                      # значения функции по оси ординат
 
-sz = len(coord_x)	# количество значений функций (точек)
-eta = np.array([0.1, 0.01, 0.001, 0.0001]) # шаг обучения для каждого параметра w0, w1, w2, w3
-w = np.array([0., 0., 0., 0.]) # начальные значения параметров модели
-N = 200 # число итераций градиентного алгоритма
+sz = len(coord_x)	                                                         # количество значений функций (точек)
+eta = np.array([0.1, 0.01, 0.001, 0.0001])                                   # шаг обучения для каждого параметра w0, w1, w2, w3
+w = np.array([0., 0., 0., 0.])                                               # начальные значения параметров модели
+N = 200                                                                      # число итераций градиентного алгоритма
 
-for i in range (N):
+for i in range (N):                                                          # корректировка весов
     w = w - eta*dQ(w)
     
-w = w.tolist()
+w = w.tolist()                                                               # запись результата в список для наглядности
 
-Q = 0
+Q = 0                                                                        # средний эмпирический риск начальное значение
 for i in range (len(np.arange(-5.0, 5.0, 1))):
     l = np.arange(-5.0, 5.0, 0.1)
     xy = np.array([1, l[i], l[i]**2, l[i]**3])
-    Q = Q + ((a(xy, np.array(w)) - func(l[i]))**2)/len(np.arange(-5.0, 5.0, 0.1))
-    print(a(xy, w)- func(l[i]))
+    Q = Q + ((a(xy, np.array(w)) - func(l[i]))**2)/len(np.arange(-5.0, 5.0, 0.1)) # средний эмпирический риск финальное значение
       
-fig, ax = plt.subplots()    # Создание окна и осей для графика
-ax.grid(True)   # отображение сетки на графике
-ax.plot(coord_x, coord_y, 'r')  
+fig, ax = plt.subplots()                                                      # Создание окна и осей для графика
+ax.grid(True)                                                                 # отображение сетки на графике
+ax.plot(coord_x, coord_y, 'r')                                                # построение графика исходной функции 
 
 a = []
-for i in range (len(np.arange(-5.0, 5.0, 0.1))):
+for i in range (len(np.arange(-5.0, 5.0, 0.1))):                              # рассчет значений для графика аппроксимированной функции
     l = np.arange(-5.0, 5.0, 0.1)
     lres = np.array([1, l[i], l[i]**2, l[i]**3])
     a.append(lres@w)
 
-ax.plot(coord_x, a, 'b')  
+ax.plot(coord_x, a, 'b')                                                      # график аппроксимированной функции
 plt.show()
+
+
+
