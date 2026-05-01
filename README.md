@@ -1,11 +1,41 @@
 <h1 align="center"> $${\color{#00FF99} \text{Gradient-algorithm}}$$</h1>
-<h2 align="center"> Hi there, I'm Aleksey
-<h3 align="center">Computer science student,  I'm from Russia 🇷🇺 I started studying Computer Science at 38.</h3>
-<h4 align="left"><b> File "approximation#1" </b></h4>
-
+<h3 align="left"> Файл "approximation#1"</h3>
+<h4 align="left"> Approximation (reconstruction) of the function is performed on the interval [-5, 5] </h4>
+<h4 align="left"> </h4>
+<h4 align="left"> <img width="302" height="42" alt="image" src="https://github.com/user-attachments/assets/8bb89de3-e2b9-4794-a300-1ed16bf034a4" /> </h4>
+<h4 align="left"> </h4>
+<h4 align="left"> Model of the species</h4>
+<h4 align="left"> </h4>
+<h4 align="left"> <img width="406" height="48" alt="image" src="https://github.com/user-attachments/assets/151af64f-c98d-4c8d-a383-2757d5c9580e" /> </h4>
+<h4 align="left"> </h4>
+<h4 align="left"> Using gradient algorithm </h4>
+<h4 align="left"> The resulting display result on the graph </h4>
+<h4 align="left"> </h4>
+<h4 align="left"> <img width="600" height="452" alt="image" src="https://github.com/user-attachments/assets/196a8737-88e5-4c4d-9c31-eba109c6be39" /> </h4>
+<h4 align="left"> </h4>
+<h4 align="left"> The final value of the average empirical risk was calculated using the formula </h4>
+<h4 align="left"> </h4>
+<h4 align="left"> <img width="370" height="82" alt="image" src="https://github.com/user-attachments/assets/d67ffe2d-7723-476c-b1ed-ff5fe22cdc44" /> </h4>
+<h4 align="left"> Qe = 0.0178 </h4>
+<h4 align="left"> </h4>
 
 <h1 align="center"> $${\color{#00FF99} \text{Градиентный алгоритм}}$$</h1>
-<h2 align="center"> Привет, меня зовут Алексей
-<h3 align="center">Я из России 🇷🇺 и я начал изучать Computer Science в 38 лет </h3>
-<h4 align="left"> Файл "approximation#1"</h4>
-<h4 align="center"> Выполняется аппроксимация функции на отрезке с помощью модели a(x)=w0​+w1​⋅x+w2​⋅x2+w3​⋅x </h4>
+<h3 align="left"> Файл "approximation#1"</h3>
+<h4 align="left"> Выполняется аппроксимация (восстановление) на отрезке [-5, 5] функции </h4>
+<h4 align="left"> </h4>
+<h4 align="left"> <img width="302" height="42" alt="image" src="https://github.com/user-attachments/assets/8bb89de3-e2b9-4794-a300-1ed16bf034a4" /> </h4>
+<h4 align="left"> </h4>
+<h4 align="left"> Моделью вида</h4>
+<h4 align="left"> </h4>
+<h4 align="left"> <img width="406" height="48" alt="image" src="https://github.com/user-attachments/assets/151af64f-c98d-4c8d-a383-2757d5c9580e" /> </h4>
+<h4 align="left"> </h4>
+<h4 align="left"> С помощью градиентного алгоритма </h4>
+<h4 align="left"> Полученый результат отображен на графике </h4>
+<h4 align="left"> </h4>
+<h4 align="left"> <img width="600" height="452" alt="image" src="https://github.com/user-attachments/assets/196a8737-88e5-4c4d-9c31-eba109c6be39" /> </h4>
+<h4 align="left"> </h4>
+<h4 align="left"> Рассчитано финальное значение среднего эмпирического риска. По формуле </h4>
+<h4 align="left"> </h4>
+<h4 align="left"> <img width="370" height="82" alt="image" src="https://github.com/user-attachments/assets/d67ffe2d-7723-476c-b1ed-ff5fe22cdc44" /> </h4>
+<h4 align="left"> Qe = 0.0178 </h4>
+
