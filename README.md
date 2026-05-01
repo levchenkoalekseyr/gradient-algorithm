@@ -35,6 +35,18 @@
 <h4 align="left"> </h4>
 <h4 align="left"> The final average empirical risk Q = 0.020 </h4>
 
+<h1 align="left"> </h1>
+
+<h3 align="left"> File <u><i>"classification SGD"</i></u></h3>
+<h4 align="left"> The classification is performed by stochastic gradient descent</h4>
+<h4 align="left"> </h4>
+<h4 align="left"> The resulting result</h4>
+<h4 align="left"> </h4>
+<h4 align="left"> <img width="636" height="470" alt="image" src="https://github.com/user-attachments/assets/8ad43244-88a2-4725-b1f1-aaa14c81f55e" /></h4>
+<h4 align="left"> </h4>
+<h4 align="left"> ИThe final empirical risk Q = 0.070 </h4>
+
+
 
 <h1 align="left"> </h1>
 <h1 align="center"> $${\color{#00FF99} \text{Градиентный алгоритм}}$$</h1>
@@ -65,11 +77,14 @@
 <h4 align="left"> <img width="600" height="42" alt="image" src="https://github.com/user-attachments/assets/99e4cb9a-d5e7-4171-894b-b17148db5564" /> </h4>
 <h4 align="left"> </h4>
 <h4 align="left"> Моделью вида</h4>
+
+<h1 align="left"> </h1>
+
+<h3 align="left"> File <u><i>"classification SGD"</i></u></h3>
+<h4 align="left"> Выполняется классификация стохастическим градиентным спуском</h4>
 <h4 align="left"> </h4>
-<h4 align="left"> <img width="415" height="50" alt="image" src="https://github.com/user-attachments/assets/cc8fab77-9287-4e98-bc0c-8efdb952f6cf" /></h4>
+<h4 align="left"> Полученый результат</h4>
 <h4 align="left"> </h4>
-<h4 align="left"> Полученый результат на графике</h4>
+<h4 align="left"> <img width="636" height="470" alt="image" src="https://github.com/user-attachments/assets/8ad43244-88a2-4725-b1f1-aaa14c81f55e" /></h4>
 <h4 align="left"> </h4>
-<h4 align="left"> <img width="611" height="459" alt="image" src="https://github.com/user-attachments/assets/2cbbabd0-8d64-4cc7-adb9-6c2f43c21e54" /></h4>
-<h4 align="left"> </h4>
-<h4 align="left"> Итоговый средний эмпирический риск Q = 0.020 </h4>
+<h4 align="left"> Итоговый средний эмпирический риск Q = 0.070 </h4>
