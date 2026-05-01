@@ -1,44 +1,60 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-x_train = np.array([[10, 50], [20, 30], [25, 30], [20, 60], [15, 70], [40, 40], [30, 45], [20, 45], [40, 30], [7, 35]])
-y_train = np.array([-1, 1, 1, -1, -1, 1, 1, -1, 1, -1])
+# исходная функция, которую нужно аппроксимировать моделью a(x)
+def func(x):
+    return 0.5 * x + 0.2 * x ** 2 - 0.05 * x ** 3 + 0.2 * np.sin(4 * x) - 2.5
 
-n_train = len(x_train)                                                                            # размер обучающей выборки
-w = [0, -1]                                                                                       # начальное значение вектора w
-a = lambda x: np.sign(x[0]*w[0] + x[1]*w[1])                                                      # решающее правило
-N = 50                                                                                            # максимальное число итераций
-L = 0.1                                                                                           # шаг изменения веса
-e = 0.1                                                                                           # добавка для w0 для зазора между разделяющей линией и граничным образом
+def a(x, w):
+    return w[0] + w[1]*x + w[2]*x**2 + w[3]*x**3
 
-last_error_index = -1                                                                             # индекс последнего ошибочного наблюдения
+def Qk(x, w, y):
+    return (x@w - y)**2
 
-for n in range(N):
-    for i in range(n_train):                                                                      # перебор по наблюдениям
-        if y_train[i]*a(x_train[i]) < 0:                                                          # если ошибка классификации,
-            w[0] = w[0] + L * y_train[i]                                                          # то корректировка веса w0
-            last_error_index = i
+def dQk(x, w, y):
+    return (x@w - y)*x.T
 
-    Q = sum([1 for i in range(n_train) if y_train[i]*a(x_train[i]) < 0])
-    if Q == 0:                                                                                    # показатель качества классификации (число ошибок)
-        break                                                                                     # останов, если все верно классифицируем
+coord_x = np.arange(-4.0, 6.0, 0.1) # значения по оси абсцисс [-4; 6] с шагом 0.1
+coord_y = func(coord_x) # значения функции по оси ординат
 
-if last_error_index > -1:
-    w[0] = w[0] + e * y_train[last_error_index]
+sz = len(coord_x)	# количество значений функций (точек)
+eta = np.array([0.1, 0.01, 0.001, 0.0001]) # шаг обучения для каждого параметра w0, w1, w2, w3
+w = np.array([0., 0., 0., 0.]) # начальные значения параметров модели
+N = 500 # число итераций алгоритма SGD
+lm = 0.02 # значение параметра лямбда для вычисления скользящего экспоненциального среднего
+batch_size = 50 # размер мини-батча (величина K = 50)
 
-line_x = list(range(max(x_train[:, 0])))                                                          # формирование графика разделяющей линии
-line_y = [w[0]*x for x in line_x]
+Qe = 0# начальное значение среднего эмпирического риска
+np.random.seed(0) # генерация одинаковых последовательностей псевдослучайных чисел
 
-x_0 = x_train[y_train == 1]                                                                       # формирование точек для 1-го
-x_1 = x_train[y_train == -1]                                                                      # и 2-го классов
+#алгоритм
+for i in range (N):
+    k = np.random.randint(0, sz-batch_size)
+    _Qk = 0
+    _dQk = 0
+    for j in range (k, k + batch_size):
+        X = np.array([1, coord_x[j], coord_x[j]**2, coord_x[j]**3])
+        _Qk = _Qk + Qk(X, w, coord_y[j])
+        _dQk = _dQk + dQk(X, w, coord_y[j])
 
-plt.scatter(x_0[:, 0], x_0[:, 1], color='red')
-plt.scatter(x_1[:, 0], x_1[:, 1], color='blue')
-plt.plot(line_x, line_y, color='green')
+    w = w - 2*eta*_dQk/batch_size
+    Qe = lm*_Qk/batch_size + (1-lm)*Qe
 
-plt.xlim([0, 45])
-plt.ylim([0, 75])
-plt.ylabel("длина")
-plt.xlabel("ширина")
-plt.grid(True)
+#итоговый эмпирический риск
+Q = 0
+for i in range(sz):
+    Q = Q + (a(coord_x[i], w) - coord_y[i])**2
+Q = Q/sz
+
+w = w.tolist()
+
+fig, ax = plt.subplots()    # Создание окна и осей для графика
+ax.grid(True)   # отображение сетки на графике
+ax.plot(coord_x, coord_y, 'r')  
+
+res = []
+for i in range (sz):
+    res.append(a(i/10-4.0, w))
+
+ax.plot(coord_x, res, 'b')  
 plt.show()
