@@ -1,5 +1,5 @@
 <h1 align="center"> $${\color{#00FF99} \text{Gradient-algorithm}}$$</h1>
-<h3 align="left"> Файл <u><i>"approximation#1"</i></u></h3>
+<h3 align="left"> File <u><i>"approximation#1"</i></u></h3>
 <h4 align="left"> Approximation (reconstruction) of the function is performed on the interval [-5, 5] </h4>
 <h4 align="left"> </h4>
 <h4 align="left"> <img width="302" height="42" alt="image" src="https://github.com/user-attachments/assets/8bb89de3-e2b9-4794-a300-1ed16bf034a4" /> </h4>
@@ -17,12 +17,13 @@
 <h4 align="left"> </h4>
 <h4 align="left"> <img width="370" height="82" alt="image" src="https://github.com/user-attachments/assets/d67ffe2d-7723-476c-b1ed-ff5fe22cdc44" /> </h4>
 <h4 align="left"> Qe = 0.0178 </h4>
-<h4 align="left"> </h4>
+<h1 align="left"> </h1>
 
 
+<h3 align="left"> File <u><i>"classification#1"</i></u></h3>
 
 
-
+<h1 align="left"> </h1>
 <h1 align="center"> $${\color{#00FF99} \text{Градиентный алгоритм}}$$</h1>
 <h3 align="left"> Файл "approximation#1"</h3>
 <h4 align="left"> Выполняется аппроксимация (восстановление) на отрезке [-5, 5] функции </h4>
@@ -42,4 +43,8 @@
 <h4 align="left"> </h4>
 <h4 align="left"> <img width="370" height="82" alt="image" src="https://github.com/user-attachments/assets/d67ffe2d-7723-476c-b1ed-ff5fe22cdc44" /> </h4>
 <h4 align="left"> Qe = 0.0178 </h4>
+
+<h1 align="left"> </h1>
+
+<h3 align="left"> Файл <u><i>"classification#1"</i></u></h3>
 
