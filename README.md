@@ -1,6 +1,6 @@
 <h1 align="center"> $${\color{#00FF99} \text{Gradient-algorithm}}$$</h1>
 <h3 align="left"> File <u><i>"approximation GD"</i></u></h3>
-<h4 align="left"> Approximation (reconstruction) of the function is performed on the interval [-5, 5] </h4>
+<h4 align="left"> Approximation (reconstruction) of the function is performed on the interval [-5, 5] by gradient descent </h4>
 <h4 align="left"> </h4>
 <h4 align="left"> <img width="302" height="42" alt="image" src="https://github.com/user-attachments/assets/8bb89de3-e2b9-4794-a300-1ed16bf034a4" /> </h4>
 <h4 align="left"> </h4>
@@ -21,13 +21,25 @@
 
 
 <h3 align="left"> File <u><i>"approximation SGD"</i></u></h3>
-<h4 align="left"> <img width="650" height="495" alt="image" src="https://github.com/user-attachments/assets/f0aaf9bc-c325-4f2b-b384-035d6f6d9ff4" /></h4>
+<h4 align="left"> approximation (reconstruction) is performed on the segment [-4, 6] of the function by stochastic gradient descent</h4>
+<h4 align="left"> </h4>
+<h4 align="left"> <img width="600" height="42" alt="image" src="https://github.com/user-attachments/assets/99e4cb9a-d5e7-4171-894b-b17148db5564" /> </h4>
+<h4 align="left"> </h4>
+<h4 align="left"> A model of the type</h4>
+<h4 align="left"> </h4>
+<h4 align="left"> <img width="415" height="50" alt="image" src="https://github.com/user-attachments/assets/cc8fab77-9287-4e98-bc0c-8efdb952f6cf" /></h4>
+<h4 align="left"> </h4>
+<h4 align="left"> The resulting result on the graph</h4>
+<h4 align="left"> </h4>
+<h4 align="left"> <img width="611" height="459" alt="image" src="https://github.com/user-attachments/assets/2cbbabd0-8d64-4cc7-adb9-6c2f43c21e54" /></h4>
+<h4 align="left"> </h4>
+<h4 align="left"> The final average empirical risk Q = 0.020 </h4>
 
 
 <h1 align="left"> </h1>
 <h1 align="center"> $${\color{#00FF99} \text{Градиентный алгоритм}}$$</h1>
 <h3 align="left"> Файл "approximation GD"</h3>
-<h4 align="left"> Выполняется аппроксимация (восстановление) на отрезке [-5, 5] функции </h4>
+<h4 align="left"> Выполняется аппроксимация (восстановление) на отрезке [-5, 5] функции градиентным спуском</h4>
 <h4 align="left"> </h4>
 <h4 align="left"> <img width="302" height="42" alt="image" src="https://github.com/user-attachments/assets/8bb89de3-e2b9-4794-a300-1ed16bf034a4" /> </h4>
 <h4 align="left"> </h4>
@@ -47,5 +59,17 @@
 
 <h1 align="left"> </h1>
 
-<h3 align="left"> Файл <u><i>"classification#1"</i></u></h3>
-
+<h3 align="left"> File <u><i>"approximation SGD"</i></u></h3>
+<h4 align="left"> Выполняется аппроксимация (восстановление) на отрезке [-4, 6] функции стохастическим градиентным спуском</h4>
+<h4 align="left"> </h4>
+<h4 align="left"> <img width="600" height="42" alt="image" src="https://github.com/user-attachments/assets/99e4cb9a-d5e7-4171-894b-b17148db5564" /> </h4>
+<h4 align="left"> </h4>
+<h4 align="left"> Моделью вида</h4>
+<h4 align="left"> </h4>
+<h4 align="left"> <img width="415" height="50" alt="image" src="https://github.com/user-attachments/assets/cc8fab77-9287-4e98-bc0c-8efdb952f6cf" /></h4>
+<h4 align="left"> </h4>
+<h4 align="left"> Полученый результат на графике</h4>
+<h4 align="left"> </h4>
+<h4 align="left"> <img width="611" height="459" alt="image" src="https://github.com/user-attachments/assets/2cbbabd0-8d64-4cc7-adb9-6c2f43c21e54" /></h4>
+<h4 align="left"> </h4>
+<h4 align="left"> Итоговый средний эмпирический риск Q = 0.020 </h4>
